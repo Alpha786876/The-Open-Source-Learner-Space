@@ -6,7 +6,7 @@ AUTO-DISCOVERY SETUP
    The catalogue checks GitHub's public repository API and lists every PDF it finds.
    */
    const REPO_OWNER = "Alpha786876";
-   const REPO_NAME = "Alpha786876";
+   const REPO_NAME = "The-Open-Source-Learner-Space";
    const BOOKS_FOLDER = "books";
    const API_BASE = "https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BOOKS_FOLDER}";
 
