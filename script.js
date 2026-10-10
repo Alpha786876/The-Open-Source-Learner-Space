@@ -8,7 +8,7 @@ AUTO-DISCOVERY SETUP
    const REPO_OWNER = "Alpha786876";
    const REPO_NAME = "The-Open-Source-Learner-Space";
    const BOOKS_FOLDER = "books";
-   const API_BASE = "https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BOOKS_FOLDER}";
+   const API_BASE = 'https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${BOOKS_FOLDER}';
 
 const grid = document.getElementById("book-grid");
 const statusEl = document.getElementById("status");
