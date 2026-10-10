@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A quiet, minimal reading space for original educational books written by Milan C. Soni.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>The Open Source Learner Space — Milan C. Soni</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Home">
+      <span class="mark" aria-hidden="true">L</span>
+      <span class="wordmark-copy"><strong>The Open Source Learner Space</strong><small>By Milan C. Soni</small></span>
+    </a>
+    <a class="header-link" href="#library">Explore library <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> AN OPEN LEARNING LIBRARY</p>
+      <h1>Learn something.<br><span>Build something.</span></h1>
+      <p class="hero-copy">A growing collection of practical, original learning books. Read online, at your own pace.</p>
+      <a class="primary-link" href="#library">Browse the books <span aria-hidden="true">↓</span></a>
+      <div class="hero-note"><span class="note-line"></span><span>Thoughtfully written. Freely accessible.</span></div>
+    </section>
+
+    <section class="library-section" id="library">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE COLLECTION</p>
+          <h2>Reading room</h2>
+        </div>
+        <p class="book-count" id="book-count">Finding books…</p>
+      </div>
+      <div id="status" class="status" role="status" aria-live="polite">Loading the library…</div>
+      <div id="book-grid" class="book-grid" aria-label="Available books"></div>
+      <noscript><p class="status">Please enable JavaScript to load the library catalogue.</p></noscript>
+      <p class="library-footnote">New books appear here automatically when a PDF is added to the public <code>books/</code> folder in this website’s GitHub repository.</p>
+    </section>
+
+    <section class="about-section">
+      <div class="about-label"><span class="tiny-star">✳</span> A NOTE FROM THE AUTHOR</div>
+      <div class="about-copy">
+        <h2>Made to make learning more accessible.</h2>
+        <p>This library is created and maintained by Milan C. Soni, with the aim of sharing knowledge in a clear, approachable way.</p>
+        <p class="copyright-note">All books published here are original writings by the website’s creator, Milan C. Soni. Copyright remains with the author. This library does not host books from other authors or publishers, and its works are not copied from other sources. The books are also available on Google Play Books.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Milan C. Soni</span>
+    <span>Made for curious minds.</span>
+  </footer>
+
+  <dialog id="reader-dialog" class="reader-dialog" aria-labelledby="reader-title">
+    <div class="reader-topbar">
+      <div class="reader-title-wrap"><p class="eyebrow">ONLINE READER</p><h2 id="reader-title">Read book</h2></div>
+      <button id="close-reader" class="icon-button" type="button" aria-label="Close reader">×</button>
+    </div>
+    <div class="reader-actions">
+      <button id="prev-page" class="reader-button" type="button">← Previous</button>
+      <span id="page-indicator">Page 1</span>
+      <button id="next-page" class="reader-button" type="button">Next →</button>
+      <a id="open-pdf" class="reader-download" target="_blank" rel="noopener">Open PDF separately ↗</a>
+    </div>
+    <div id="reader-status" class="reader-status" role="status"></div>
+    <div class="pdf-stage"><canvas id="pdf-canvas" aria-label="PDF page"></canvas></div>
+  </dialog>
+</body>
+</html>
